@@ -20,4 +20,7 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight-text);
   background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  height: 960px;
 }
