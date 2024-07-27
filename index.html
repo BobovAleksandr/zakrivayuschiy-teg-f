@@ -17,7 +17,13 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header adaptive-content">
+      <span class="header__logo">
+        &lt;/HTML&gt;
+      </span>
+      <h1 class="header__title">
+        закрывающий тег
+      </h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -44,7 +50,53 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main adaptive-content">
+      <ul class="main__list">
+        <li class="main__card card">
+          <h2 class="card__title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h2>
+          <div class="card__image-container">
+            <span class="card__image-label">
+              &lt;/HTML&gt;
+            </span>
+            <img class="card__image" src="./images/truck.jpg" alt="Изображение фургона">
+          </div>
+          <div class="card__content">
+            <div class="card__text">
+              <p class="card__text-block">
+                Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+              </p>
+              <p class="card__text-block">
+                Место для ваших воспоминаний о начале обучения.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
+                  <g class="heart">
+                    <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
+                    <path class="main-body" fill="none" d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"/>
+                    <path class="core" fill="none" d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"/>
+                  </g>
+                  <path class="sparks" fill="var(--heart-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
+                </svg>
+              </button>
+              <button class="card__like-button button">
+                <span class="button__text">
+                  Like
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+
+
+
+    </main>
     <script src="./scripts/like.js"></script>
     <svg xmlns="http://www.w3.org/2000/svg" >
       <symbol id="floppy" width="40" height="40" fill="currentColor">

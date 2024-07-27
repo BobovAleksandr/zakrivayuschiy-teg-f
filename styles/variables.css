@@ -3,14 +3,15 @@
   --main-font: 'Inter-Variable';
   --accent-font: 'PressStart2P';
 
-  --main-font-weight-title: 700;
-  --main-font-weight-text: 400;
+  --content-size: clamp(375px, 70vi, 700px);
 
+  --main-font-weight-title: 'wght' 700;
+  --main-font-weight-text: 'wght' 400;
+
+  --main-color: #000;
   --bg-color: #fff;
-
-  --bg-gradient: repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px), 
-                 repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
-                 linear-gradient(#e7e7e7 0.01%, #e7e7e7, #1a1a1a);
+  --grid-gradient-color: #d3d3d3;
+  --bg-gradient-color-main: #e7e7e7;
+  --bg-gradient-color-secondary: #1a1a1a;
+  --heart-color: #FF0000
 }
-
-
