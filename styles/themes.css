@@ -17,7 +17,8 @@
   --bg-gradient-color-secondary: #1a1a1a;
 }
 
-.theme-light .button__text {
+.theme-light .button__text,
+.theme-light .button-floppy {
   color: var(--bg-color);
 }
 
@@ -32,15 +33,10 @@
   --bg-gradient-color-secondary: #004306;
 }
 
-.theme-dark .button__text {
+.theme-dark .button__text,
+.theme-dark .button-floppy {
   color: var(--main-color);
 }
-
-
-
-
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -53,7 +49,8 @@
     --bg-gradient-color-secondary: #004306;
   }
 
-  .button__text {
+  .button__text,
+  .button-floppy {
     color: var(--main-color);
   }
 }
