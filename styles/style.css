@@ -148,6 +148,7 @@
   display: block;
   width: 100%;
   object-fit: cover;
+  object-position: center center;
   aspect-ratio: 1 / 1;
 }
 
@@ -196,12 +197,13 @@
   mix-blend-mode: hard-light;
 }
 
-@supports(-webkit-text-stroke: 1px var(--bg-color)) {
+@supports(((text-stroke: 1px var(--bg-color))) or (-webkit-text-stroke: 1px var(--bg-color))) {
   .card__image-label {
       text-shadow: none;
+      text-stroke: 1px var(--bg-color);
       -webkit-text-stroke: 1px var(--bg-color);
   }
-} 
+}
 
 .card__content {
   padding: 23px 25px;
