@@ -266,6 +266,7 @@
   width: 21px;
   aspect-ratio: 1 / 1;
   mix-blend-mode: difference;
+  color: var(--bg-color);
 }
 
 .button {
@@ -304,6 +305,7 @@
   font-family: var(--accent-font), monospace;
   font-size: 14px;
   font-weight: normal;
+  color: var(--bg-color);
   line-height: 90%;
   mix-blend-mode: difference;
 }
