@@ -28,9 +28,9 @@
   min-block-size: 100dvb;
 }
 
-@supports (font-variation-settings: var(--main-font-weight-text)) {
+@supports (font-variation-settings: 'wght' var(--main-font-weight-text)) {
   .page {
-    font-variation-settings: var(--main-font-weight-text);
+    font-variation-settings: 'wght' var(--main-font-weight-text);
   }
 }
 
@@ -143,9 +143,9 @@
   line-height: 21px;
 }
 
-@supports (font-variation-settings: var(--main-font-weight-title)) {
+@supports (font-variation-settings: 'wght' var(--main-font-weight-title)) {
   .card__title {
-    font-variation-settings: var(--main-font-weight-title);
+    font-variation-settings: 'wght' var(--main-font-weight-title);
   }
 }
 
