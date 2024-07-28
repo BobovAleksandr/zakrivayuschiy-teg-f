@@ -18,6 +18,7 @@
   padding-block: 100px;
   color: var(--main-color);
   font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--main-font-weight-text);
   background-color: var(--bg-color);
   background-image: repeating-linear-gradient(var(--grid-gradient-color) 0px 2px, transparent 2px 4px), 
                     repeating-linear-gradient(90deg, var(--grid-gradient-color) 0px 2px, transparent 2px 4px),
@@ -26,14 +27,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--main-font-weight-text);
 }
-
-/* @supports (font-variation-settings: 'wght' var(--main-font-weight-text)) {
-  .page {
-    font-variation-settings: 'wght' var(--main-font-weight-text);
-  }
-} */
 
 .header {
   display: flex;
@@ -144,12 +138,6 @@
   line-height: 21px;
   font-variation-settings: 'wght' var(--main-font-weight-title);
 }
-
-/* @supports (font-variation-settings: 'wght' var(--main-font-weight-title)) {
-  .card__title {
-    font-variation-settings: 'wght' var(--main-font-weight-title);
-  }
-} */
 
 .card__image-container {
   position: relative;
