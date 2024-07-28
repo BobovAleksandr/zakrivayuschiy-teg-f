@@ -26,13 +26,14 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--main-font-weight-text);
 }
 
-@supports (font-variation-settings: 'wght' var(--main-font-weight-text)) {
+/* @supports (font-variation-settings: 'wght' var(--main-font-weight-text)) {
   .page {
     font-variation-settings: 'wght' var(--main-font-weight-text);
   }
-}
+} */
 
 .header {
   display: flex;
@@ -141,13 +142,14 @@
   margin: 5px 10px;
   font-size: 18px;
   line-height: 21px;
+  font-variation-settings: 'wght' var(--main-font-weight-title);
 }
 
-@supports (font-variation-settings: 'wght' var(--main-font-weight-title)) {
+/* @supports (font-variation-settings: 'wght' var(--main-font-weight-title)) {
   .card__title {
     font-variation-settings: 'wght' var(--main-font-weight-title);
   }
-}
+} */
 
 .card__image-container {
   position: relative;
