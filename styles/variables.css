@@ -5,9 +5,6 @@
 
   --content-size: clamp(375px, 70vi, 700px);
 
-  --main-font-weight-title: 'wght' 700;
-  --main-font-weight-text: 'wght' 400;
-
   --main-color: #000;
   --bg-color: #fff;
   --grid-gradient-color: #d3d3d3;

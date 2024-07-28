@@ -8,8 +8,8 @@
 
 /* ----- Светлая тема ----- */
 :root.theme-light {
-  --main-font-weight-title: 700;
-  --main-font-weight-text: 400;
+  --main-font-weight-title: 'wght' 700;
+  --main-font-weight-text: 'wght' 400;
   --main-color: #000;
   --bg-color: #fff;
   --grid-gradient-color: #d3d3d3;
@@ -24,8 +24,8 @@
 
 /* ----- Темная тема ----- */
 :root.theme-dark {
-  --main-font-weight-title: 785;
-  --main-font-weight-text: 465;
+  --main-font-weight-title: 'wght' 785;
+  --main-font-weight-text: 'wght' 465;
   --main-color: #00CC14;
   --bg-color: #000;
   --grid-gradient-color: #000;
@@ -40,8 +40,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-font-weight-title: 785;
-    --main-font-weight-text: 465;
+    --main-font-weight-title: 'wght' 785;
+    --main-font-weight-text: 'wght' 465;
     --main-color: #00CC14;
     --bg-color: #000;
     --grid-gradient-color: #000;
