@@ -16,34 +16,37 @@
 
 .page {
   padding-block: 100px;
-  color: var(--main-color);
-  font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-font-weight-text);
-  background-color: var(--bg-color);
-  background-image: repeating-linear-gradient(var(--grid-gradient-color) 0px 2px, transparent 2px 4px), 
-                    repeating-linear-gradient(90deg, var(--grid-gradient-color) 0px 2px, transparent 2px 4px),
-                    linear-gradient(var(--bg-gradient-color-main) 0.01%, var(--bg-gradient-color-main), var(--bg-gradient-color-secondary));
-  background-size: cover;
-  background-attachment: fixed;
+  color: var(--main-color, #000);
+  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
+  font-variation-settings: 'wght' var(--main-font-weight-text, 400);
+  background: fixed center / cover  var(--bg-color, #fff);
+  background-image: repeating-linear-gradient(var(--grid-gradient-color, #d3d3d3) 0px 2px, transparent 2px 4px), 
+                    repeating-linear-gradient(90deg, var(--grid-gradient-color, #d3d3d3) 0px 2px, transparent 2px 4px),
+                    linear-gradient(var(--bg-gradient-color-main, #e7e7e7) 0.01%, var(--bg-gradient-color-main, #e7e7e7), var(--bg-gradient-color-secondary, #1a1a1a));
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.adaptive-content {
+  margin-inline: auto;
+  inline-size: var(--content-size, clamp(375px, 70vi, 700px));
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--main-color, #000);
   padding-block-start: clamp(120px, 9.4vi, 136px);
   padding-block-end: 26px;
-
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font, 'PressStart2P'), monospace;
   text-transform: uppercase;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
 }
 
 .header__logo {
   font-size: clamp(49px, 4.5vi, 65px);
+  text-transform: uppercase;
 }
 
 .header__title {
@@ -80,6 +83,7 @@
 .theme-menu__button:disabled:before {
   content: '▶';
   position: absolute;
+  inset-inline-start: -20px;
   animation-name: currentTheme;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -128,20 +132,20 @@
 }
 
 .card {
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
+  border: 2px solid var(--main-color, #000);
+  background-color: var(--bg-color, #fff);
 }
 
 .card__title {
   margin: 5px 10px;
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: 'wght' var(--main-font-weight-title);
+  font-variation-settings: 'wght' var(--main-font-weight-title, 700);
 }
 
 .card__image-container {
   position: relative;
-  border-block: 2px solid var(--main-color);
+  border-block: 2px solid var(--main-color, #000);
 }
 
 .card__image {
@@ -188,20 +192,20 @@
   position: absolute;
   z-index: 2;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, 'PressStart2P'), monospace;
   font-size: 14px;
   text-transform: uppercase;
-  text-shadow: 0 0 2px var(--bg-color);
+  text-shadow: 0 0 2px var(--bg-color, #fff);
   inset-block-start: 25px;
   inset-inline-end: 25px;
   mix-blend-mode: hard-light;
 }
 
-@supports(((text-stroke: 1px var(--bg-color))) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports(((text-stroke: 1px var(--bg-color, #fff))) or (-webkit-text-stroke: 1px var(--bg-color, #fff))) {
   .card__image-label {
       text-shadow: none;
-      text-stroke: 1px var(--bg-color);
-      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color, #fff);
+      -webkit-text-stroke: 1px var(--bg-color, #fff);
   }
 }
 
@@ -225,6 +229,47 @@
   margin-block-start: 25px;
 }
 
+.button {
+  position: relative;
+  border: 2px solid var(--main-color, #000);
+  background-color: var(--bg-color, #fff);
+  transition: box-shadow 0.3s ease;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+.button:hover:after {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 var(--main-color, #000);
+  outline: none;
+}
+
+.button__text {
+  position: relative;
+  z-index: 5;
+  display: block;
+  font-family: var(--accent-font, 'PressStart2P'), monospace;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--bg-color, #fff);
+  line-height: 90%;
+  mix-blend-mode: difference;
+}
+
 .card__like-button {
   display: block;
   min-width: 130px;
@@ -244,75 +289,26 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--main-color, #000);
   outline: none;
 }
 
-.footer {
-  margin-block-start: 50px;
-}
-
-.footer__button {
+.save-button {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-block-start: 50px;
   margin-inline: auto;
   padding: 15px 20px;
 }
 
-.button-floppy {
+.save-button--floppy {
   position: relative;
   z-index: 5;
   width: 21px;
   aspect-ratio: 1 / 1;
+  color: var(--bg-color, #fff);
   mix-blend-mode: difference;
-  color: var(--bg-color);
-}
-
-.button {
-  position: relative;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  transition: box-shadow 0.3s ease;
-}
-
-.button:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--main-color);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  inset-inline-start: 0;
-  inset-block-start: 0;
-}
-
-.button:hover:after {
-  transform: scaleX(1);
-}
-
-.button:focus {
-  box-shadow: 2px 2px 0 var(--main-color);
-  outline: none;
-}
-
-.button__text {
-  position: relative;
-  z-index: 5;
-  display: block;
-  font-family: var(--accent-font), monospace;
-  font-size: 14px;
-  font-weight: normal;
-  color: var(--bg-color);
-  line-height: 90%;
-  mix-blend-mode: difference;
-}
-
-.adaptive-content {
-  margin-inline: auto;
-  inline-size: var(--content-size);
 }
 
 .dialog[open] {
@@ -321,12 +317,12 @@
   gap: 30px 20px;
   max-width: min(91%, 353px);
   padding: 30px;
-  color: var(--main-color);
-  font-family: var(--accent-font), monospace;
+  color: var(--main-color, #000);
+  font-family: var(--accent-font, 'PressStart2P'), monospace;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
 }
 
 .dialog::backdrop {
@@ -338,19 +334,22 @@
   width: 39px;
 }
 
-.dialog__button {
+.dialog__form {
   grid-column: 1 / 3;
+}
+
+.dialog__button {
+  width: 100%;
   padding-block: 12px;
   text-transform: uppercase;
 }
 
-
 @media (width <= 375px) {
-  .footer__button {
+  .save-button {
     flex-direction: column;
   }
 
-  .button-floppy {
+  .save-button--floppy {
     width: 28px;
   }
 

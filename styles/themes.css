@@ -18,8 +18,8 @@
 }
 
 .theme-light .button__text,
-.theme-light .button-floppy {
-  color: var(--bg-color);
+.theme-light .save-button--floppy {
+  color: var(--bg-color, #fff);
 }
 
 /* ----- Темная тема ----- */
@@ -34,8 +34,8 @@
 }
 
 .theme-dark .button__text,
-.theme-dark .button-floppy {
-  color: var(--main-color);
+.theme-dark .save-button--floppy {
+  color: var(--main-color, #00CC14);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +50,7 @@
   }
 
   .button__text,
-  .button-floppy {
-    color: var(--main-color);
+  .save-button--floppy {
+    color: var(--main-color, #00CC14);
   }
 }

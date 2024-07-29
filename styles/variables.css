@@ -2,6 +2,8 @@
 :root {
   --main-font: 'Inter-Variable';
   --accent-font: 'PressStart2P';
+  --main-font-weight-title: 700;
+  --main-font-weight-text: 400;
 
   --content-size: clamp(375px, 70vi, 700px);
 
